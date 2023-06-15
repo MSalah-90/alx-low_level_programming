@@ -2,10 +2,11 @@
 
 
 /**
+ * main - Entry point 
  *
- * hello world
- * Description: main function is ok
+ * Description: C function that prints with put function
  *
+ * Return: Always 0 (success)
 */
 
 
