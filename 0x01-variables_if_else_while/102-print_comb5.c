@@ -23,7 +23,7 @@ int main(void)
 				y = 0;
 				while (y < 10)
 				{
-					if ((i + j) < (x + y))
+					if ((i + j) <= (x + y))
 					{
 						putchar(i + 48);
 						putchar(j + 48);
