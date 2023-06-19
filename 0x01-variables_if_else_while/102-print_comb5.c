@@ -10,7 +10,7 @@
 
 int main(void)
 {
-	int i = 0, j, x, y;
+	int i = 0, j, x, y, a, b;
 
 	while (i < 10)
 	{
@@ -23,16 +23,16 @@ int main(void)
 				y = 0;
 				while (y < 10)
 				{
-					if ((i + j) <= (x + y))
+					a = (i * 10) + j;
+					b = (x * 10) + y;
+					if (a < b)
 					{
 						putchar(i + 48);
 						putchar(j + 48);
 						putchar(' ');
 						putchar(x + 48);
 						putchar(y + 48);
-					if (i == 9 && j == 8 && x == 9 && y == 9)
-						return (0);
-					else
+					if (a != 98 || b != 99)
 					{
 						putchar(',');
 						putchar(' ');
