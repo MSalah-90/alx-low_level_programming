@@ -1,7 +1,7 @@
 #include <stdlib.h>
 #include <time.h>
 #include <stdio.h>
-#include <main.h>
+#include "main.h"
 
 /**
  * main - entry point
@@ -16,8 +16,8 @@
 int main(void)
 {
 	char x[] = "_putchar";
-
-		for (int i = 0; i < 9; i++)
+	int i;
+		for (i = 0; i < 9; i++)
 		{
 			_putchar(x[i]);
 		}

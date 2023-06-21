@@ -2,7 +2,7 @@
 #include <time.h>
 #include <unistd.h>
 #include <stdio.h>
-#include <main.h>
+#include "main.h"
 
 /**
  * _putchar - writes the char x
@@ -14,7 +14,7 @@
 */
 
 
-int _putchar(char x);
+int _putchar(char x)
 {
 	return (write(1, &x, 1));
 }
