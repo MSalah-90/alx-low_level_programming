@@ -2,23 +2,26 @@
 #include "main.h"
 
 /**
- * print_alphabet_10x - entry point
+ * print_alphabet_x10 - entry point
  *
- * Description: prints all alphabet small letters 10 times
+ * Description: prints all alphabet small letters ten times
  *
- * Return: (success)
+ * Return: 0 (success)
 */
 
-void print_alphabet_10x(void)
+void print_alphabet_x10(void)
 {
-	int i, alpha;
+	int i;
 
 	for (i = 0; i < 10; i++)
 	{
-		for (alpha = 'a'; alpha <= 'z'; alpha++)
-		{
-			_putchar(alpha);
-		}
+		char alpha = 'a';
+
+			while (alpha <= 'z')
+			{
+				_putchar(alpha);
+				alpha++;
+			}
 		_putchar('\n');
 	}
 }
