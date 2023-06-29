@@ -1,0 +1,32 @@
+#include <stdio.h>
+#include "main.h"
+#include <string.h>
+
+/**
+ * reverse_array - Entry Point
+ * @a: array
+ * @n: size of array
+ *
+ * Description: reverses the order of array
+ *
+ * Return: Nothing
+ *
+*/
+
+void reverse_array(int *a, int n)
+{
+	int i;
+	char *ptr;
+	
+	*ptr = a[n];
+
+	i = 0;
+	while (i < n)
+	{
+	ptr[i] = a[i];
+	ptr++;
+	}
+
+	while(ptr--)
+		putchar(*ptr[ptr] + 48);
+}
