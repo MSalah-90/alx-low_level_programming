@@ -20,7 +20,7 @@ char *string_toupper(char *n)
 	i = 0;
 	while (n[i])
 		i++;
-	
+
 	for (j = 0; j < i; j++)
 	{
 		if (n[j] > 96 && n[j] < 123)
