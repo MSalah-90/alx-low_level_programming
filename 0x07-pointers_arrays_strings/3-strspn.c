@@ -24,7 +24,7 @@ unsigned int _strspn(char *s, char *accept)
 		for (i = 0; accept[i] != s[j]; i++)
 		{
 			if (accept[i] == '\0')
-				return(j);		
+				return (j);
 		}
 	}
 	return (j);
