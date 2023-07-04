@@ -15,7 +15,7 @@
 
 void print_chessboard(char (*a)[8])
 {
-	long unsigned int i, j;
+	int i, j;
 
 	i = 0;
 	for (; i < 8; i++)
