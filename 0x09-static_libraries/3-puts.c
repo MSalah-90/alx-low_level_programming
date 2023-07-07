@@ -1,23 +1,20 @@
-#include <stdio.h>
 #include "main.h"
-#include <unistd.h>
-#include <math.h>
 
 /**
  * _puts - entry point
- * @str: is the char input
+ * @s: is the char input
  *
  * Description: prints string of char
  *
  * Return: void
  */
 
-void _puts(char *str)
+void _puts(char *s)
 {
-	while (*str != 0)
+	while (*s != 0)
 	{
-		_putchar(*str + 0);
-		str++;
+		_putchar(*s + 0);
+		s++;
 	}
 	_putchar('\n');
 }
