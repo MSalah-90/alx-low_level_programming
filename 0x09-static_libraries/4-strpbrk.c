@@ -1,33 +1,25 @@
 #include "main.h"
-#include <string.h>
-#include <stdio.h>
-
 /**
- * _strpbrk - Entry Point
- * @s: 1st array of chars
- * @accept: 2nd array of chars
- *
- *
- * Description: function locates the first occurrence in the string s
- * of any of the bytes in the string accept
- *
- *
- * Return: locates the first occurrence in the string s of any of the
- * bytes in the string accept
-*/
-
+ * _strpbrk - Entry point
+ * @s: input
+ * @accept: input
+ * Return: Always 0 (Success)
+ */
 char *_strpbrk(char *s, char *accept)
 {
-	unsigned int i, j;
+	int k;
 
-	j = 0;
-	for (; s[j]; j++)
+
+	while (*s)
 	{
-		for (i = 0; accept[i]; i++)
+		for (k = 0; accept[k]; k++)
 		{
-			if (accept[i] == s[j])
-				return (s + j);
+		if (*s == accept[k])
+		return (s);
 		}
+	s++;
 	}
-	return ('\0');
+
+
+return ('\0');
 }

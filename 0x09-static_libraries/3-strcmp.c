@@ -1,28 +1,24 @@
-#include <stdio.h>
 #include "main.h"
-#include <string.h>
-
 /**
- * *_strcmp - Entry Point
- * @s1: first array
- * @s2: second array
+ * _strcmp - compare string values
+ * @s1: input value
+ * @s2: input value
  *
- * Description: compare two arrays of chars
- *
- * Return: 0 if two arrays are equal
- *
-*/
-
+ * Return: s1[i] - s2[i]
+ */
 int _strcmp(char *s1, char *s2)
 {
-	int s;
+	int i;
 
-	s = 0;
-	while (s1[s] && s2[s])
+
+	i = 0;
+	while (s1[i] != '\0' && s2[i] != '\0')
 	{
-		if ((s1[s] - s2[s]) != 0)
-			return (s1[s] - s2[s]);
-		s++;
+		if (s1[i] != s2[i])
+		{
+			return (s1[i] - s2[i]);
+		}
+	i++;
 	}
-return (0);
+	return (0);
 }

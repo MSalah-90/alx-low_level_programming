@@ -1,35 +1,29 @@
-#include <stdio.h>
 #include "main.h"
-
 /**
- * *_strncpy - Entry Point
- * @dest: destination array
- * @src: source array
- * @n: only n bytes from src
+ * _strncpy - copy a string
+ * @dest: input value
+ * @src: input value
+ * @n: input value
  *
- * Description: append src to dest with only n bytes from src
- *
- * Return: pointer of dest
- *
-*/
-
+ * Return: dest
+ */
 char *_strncpy(char *dest, char *src, int n)
 {
-	int s;
+	int j;
 
-	s = 0;
-	while (src[s] && s < n)
+
+	j = 0;
+	while (j < n && src[j] != '\0')
 	{
-		dest[s] = src[s];
-		s++;
+		dest[j] = src[j];
+		j++;
+	}
+	while (j < n)
+	{
+		dest[j] = '\0';
+		j++;
 	}
 
-	while (s < n && dest[s])
-	{
-		dest[s] = '\0';
-		s++;
-	}
 
-
-return (dest);
+	return (dest);
 }

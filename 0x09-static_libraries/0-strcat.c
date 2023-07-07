@@ -1,34 +1,31 @@
-#include <stdio.h>
 #include "main.h"
 
 /**
- * *_strcat - Entry Point
- * @dest: destination array
- * @src: source array
+ * _strcat - Entry Point concatenates two strings
+ * @dest: input value
+ * @src: input value
  *
- * Description: append src to dest
- *
- * Return: pointer of dest
- *
-*/
-
+ * Return: void
+ */
 char *_strcat(char *dest, char *src)
 {
-	int d, s;
+	int i;
+	int j;
 
-	d = 0;
-	while (dest[d])
-		d++;
-
-	s = 0;
-	while (src[s])
+	i = 0;
+	while (dest[i] != '\0')
 	{
-		dest[d] = src[s];
-		d++;
-		s++;
+		i++;
+	}
+	j = 0;
+	while (src[j] != '\0')
+	{
+		dest[i] = src[j];
+		i++;
+		j++;
 	}
 
-	dest[d] = '\0';
+
+	dest[i] = '\0';
 	return (dest);
 }
-

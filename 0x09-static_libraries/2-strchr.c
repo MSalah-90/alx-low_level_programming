@@ -1,28 +1,19 @@
 #include "main.h"
-#include <string.h>
-#include <stdio.h>
-
 /**
- * _strchr - Entry Point
- * @s: input array of chars
- * @c: search this char in the given array
- *
- *
- * Description: function searches c char in string s
- *
- *
- * Return: a pointer to first occurence of c in s (not found): NULL
-*/
-
+ * _strchr - Entry point
+ * @s: input
+ * @c: input
+ * Return: Always 0 (Success)
+ */
 char *_strchr(char *s, char c)
 {
-	unsigned int j;
+	int i = 0;
 
-	j = 0;
-	for (; s[j] >= '\0'; j++)
+
+	for (; s[i] >= '\0'; i++)
 	{
-		if (s[j] == c)
-			return (s + j);
+		if (s[i] == c)
+			return (&s[i]);
 	}
-	return (NULL);
+	return (0);
 }
