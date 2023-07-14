@@ -5,7 +5,7 @@
 /**
  * string_nconcat - entry point
  * @s1: array of chars
- * @s2 array of chars
+ * @s2: array of chars
  * @n: no of chars from s2
  *
  * Description: The returned pointer shall point to a newly allocated
@@ -25,18 +25,20 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	unsigned int i, j;
 	char *var;
 
-	if (s1 == NULL)
+	if (s1 == NULL && s2 != NULL)
+	{
 		s1 = "";
-	if (s2 == NULL)
+		var = malloc(sizeof(char) * sizeof(s2));
+	}
+	if (s2 == NULL && s1 != NULL)
 	{
 		s2 = "";
+		var = malloc(sizeof(char) * sizeof(s1));
 	}
 		if (n < sizeof(s2))
 			var = malloc(sizeof(char) * (sizeof(s1) + n));
 		else if (n >= sizeof(s2))
 			var = malloc(sizeof(char) * (sizeof(s1) + sizeof(s2)));
-		else if (s2 == NULL)
-			var = malloc(sizeof(char) * sizeof(s1));
 
 	if (var == NULL)
 		return (NULL);
