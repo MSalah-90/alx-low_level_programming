@@ -26,12 +26,12 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	unsigned int i, j;
 	char *var;
 
-	if (s1 == NULL && s2 != NULL)
+	if (s1 == NULL)
 	{
 		s1 = "";
 		var = malloc(sizeof(char) * (strlen(s2) + 1));
 	}
-	if (s2 == NULL && s1 != NULL)
+	if (s2 == NULL)
 	{
 		s2 = "";
 		var = malloc(sizeof(char) * (strlen(s1) + 1));
