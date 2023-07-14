@@ -29,17 +29,17 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	if (s1 == NULL)
 	{
 		s1 = "";
-		var = malloc(sizeof(char) * (strlen(s2) + 1));
+		var = malloc(sizeof(char) * strlen(s2) + 1);
 	}
 	if (s2 == NULL)
 	{
 		s2 = "";
-		var = malloc(sizeof(char) * (strlen(s1) + 1));
+		var = malloc(sizeof(char) * strlen(s1) + 1);
 	}
 		if (n < strlen(s2))
-			var = malloc(sizeof(char) * ((strlen(s1) + n + 1)));
+			var = malloc(sizeof(char) * strlen(s1) + n + 1);
 		else if (n >= strlen(s2))
-			var = malloc(sizeof(char) * (strlen(s1) + strlen(s2) + 1));
+			var = malloc(sizeof(char) * (strlen(s1) + strlen(s2)) + 1);
 
 	if (var == NULL)
 		return (NULL);
