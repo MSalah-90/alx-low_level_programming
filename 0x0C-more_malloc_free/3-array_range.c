@@ -25,7 +25,7 @@ int *array_range(int min, int max)
 	if (min > max)
 		return (NULL);
 
-	var = malloc(sizeof(int) * max - min + 1);
+	var = malloc(sizeof(int) * (max - min + 1));
 
 	if (var == NULL)
 		return (NULL);
