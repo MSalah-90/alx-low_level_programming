@@ -28,7 +28,7 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	if (s1 == NULL && s2 != NULL)
 	{
 		s1 = "";
-		var = malloc(sizeof(char) * (sizeof(s2) - 1));
+		var = malloc(sizeof(char) * (sizeof(s2)));
 	}
 	if (s2 == NULL && s1 != NULL)
 	{
@@ -38,7 +38,7 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 		if (n < sizeof(s2))
 			var = malloc(sizeof(char) * ((sizeof(s1) + n)));
 		else if (n >= sizeof(s2))
-			var = malloc(sizeof(char) * (sizeof(s1) + sizeof(s2)));
+			var = malloc(sizeof(char) * (sizeof(s1) + sizeof(s2) - 1));
 
 	if (var == NULL)
 		return (NULL);
