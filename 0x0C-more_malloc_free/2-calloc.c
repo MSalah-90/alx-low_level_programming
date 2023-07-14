@@ -25,13 +25,13 @@ void *_calloc(unsigned int nmemb, unsigned int size)
 	if (nmemb == 0 || size == 0)
 		return (NULL);
 
-	var = malloc(size * nmemb + 1);
+	var = malloc(sizeof(int) * nmemb + 1);
 
 	if (var == NULL)
 		return (NULL);
 
 	i = 0;
-	while (i <= nmemb)
+	while (var[i])
 	{
 		var[i] = 0;
 		i++;
