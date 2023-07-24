@@ -3,6 +3,57 @@
 #include <string.h>
 #include <stdlib.h>
 #include "main.h"
+
+/**
+ * _strcpy - entry point
+ * @dest: dest
+ * @src: source
+ *
+ * Description: whole structure
+ *
+ * Return: pointer to char
+ */
+
+char *_strcpy(char *dest, char *src)
+{
+int l = 0;
+int x = 0;
+
+
+while (*(src + l) != '\0')
+{
+l++;
+}
+for ( ; x < l ; x++)
+{
+dest[x] = src[x];
+}
+dest[l] = '\0';
+return (dest);
+}
+
+/**
+ * _strlen - entry point
+ * @s: char pointer
+ *
+ * Description: whole structure
+ *
+ * Return: string length
+ */
+
+int _strlen(char *s)
+{
+int longi = 0;
+
+
+while (*s != '\0')
+{
+longi++;
+s++;
+}
+return (longi);
+}
+
 /**
  * new_dog - entry point
  * @name: dog name
@@ -13,40 +64,7 @@
  *
  * Return: pointer dog_t
  */
-/**
-char *_strcpy(char *dest, char *src)
-{
-        int l = 0;
-        int x = 0;
 
-
-        while (*(src + l) != '\0')
-        {
-                l++;
-        }
-        for ( ; x < l ; x++)
-        {
-                dest[x] = src[x];
-        }
-        dest[l] = '\0';
-        return (dest);
-}
-
-int _strlen(char *s)
-{
-        int longi = 0;
-
-
-        while (*s != '\0')
-        {
-                longi++;
-                s++;
-        }
-
-
-        return (longi);
-}
-*/
 dog_t *new_dog(char *name, float age, char *owner)
 {
 	dog_t *x;
@@ -57,8 +75,8 @@ dog_t *new_dog(char *name, float age, char *owner)
 		if (x == NULL)
 			return (NULL);
 
-	s_name = strlen(name);
-        s_owner = strlen(owner);
+	s_name = _strlen(name);
+	s_owner = _strlen(owner);
 
 	(*x).name = malloc(sizeof(char) * s_name + 1);
 
@@ -76,8 +94,8 @@ dog_t *new_dog(char *name, float age, char *owner)
 			free((*x).name);
 			return (NULL);
 		}
-(*x).name = strcpy((*x).name, name);
-(*x).owner = strcpy((*x).owner, owner);
+(*x).name = _strcpy((*x).name, name);
+(*x).owner = _strcpy((*x).owner, owner);
 (*x).age = age;
 
 return (x);
